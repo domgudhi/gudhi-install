@@ -14,5 +14,5 @@
 #curl -LO "https://github.com/GUDHI/gudhi-devel/releases/download/tags%2Fgudhi-release-${GUDHI_VERSION}/gudhi.${GUDHI_VERSION}.tar.gz" 
 
 # TEMPORARY : exit on error, because I dont want the temporary image be built and stored
-ls - aler
+ls - alrt
 exit -1
