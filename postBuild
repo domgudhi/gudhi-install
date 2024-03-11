@@ -10,7 +10,6 @@
 
 # installing GUDHI
 export GUDHI_VERSION="3.9.0"
-echo "GUDHI_VERSION = " ${GUDHI_VERSION}
 curl -LO "https://github.com/GUDHI/gudhi-devel/releases/download/tags%2Fgudhi-release-${GUDHI_VERSION}/gudhi.${GUDHI_VERSION}.tar.gz" 
 tar xf gudhi.${GUDHI_VERSION}.tar.gz
 cd gudhi.${GUDHI_VERSION}
