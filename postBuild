@@ -1,0 +1,5 @@
+#!/bin/bash
+# postBuild : Bash script for getting and building gudhi inside container
+# HAZARDOUS : not sure the wget of the gudhi archive will work
+pwd
+ls -alrt
