@@ -1,1 +1,6 @@
 numpy
+matplotlib
+scipy
+Cython
+POT
+scikit-learn
