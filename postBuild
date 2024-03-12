@@ -1,25 +1,20 @@
 #!/bin/bash
 # postBuild : Bash script for getting and building gudhi inside container
-# hopefully the curl command is working fine to get the gudhi gzipped archive file
-
-# debug commands
-#uname -a
-#cat /etc/os-release
-#pwd
-#ls -alrt
+# hopefully the curl command is working fine to get the gudhi gzipped archive file from mybinder
+# script is a translation of end of GUDHI Dockerfile
+# trick : installation in /usr/local failed (privileges needed) that's why CMAKE_INSTALL_PREFIX is defined
 
 # installing GUDHI
 export GUDHI_VERSION="3.9.0"
 curl -LO "https://github.com/GUDHI/gudhi-devel/releases/download/tags%2Fgudhi-release-${GUDHI_VERSION}/gudhi.${GUDHI_VERSION}.tar.gz" 
 tar xf gudhi.${GUDHI_VERSION}.tar.gz
 cd gudhi.${GUDHI_VERSION}
-mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_GUDHI_PYTHON=OFF -DPython_ADDITIONAL_VERSIONS=3 ..
+mkdir $HOME/share
+mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=$HOME/share -DCMAKE_BUILD_TYPE=Release -DWITH_GUDHI_PYTHON=OFF -DPython_ADDITIONAL_VERSIONS=3 ..
 make all test install
-cmake -DWITH_GUDHI_PYTHON=ON .
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/share -DWITH_GUDHI_PYTHON=ON .
 cd python
 python3 setup.py install
 
-# TEMPORARY : exit on error, because I dont want the temporary image be built and stored
-#ls - alrt
-#exit -1
+# return no error for success container construction
 exit 0
