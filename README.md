@@ -16,6 +16,8 @@ Free binder websites are limited in docker images size, hence the challenge.
 
 GUDHI and binder and Jupyterhub licences apply : no commercial use.
 
+This repo can be cloned for further branch updates, no acknowledgments are asked ;-)
+
 ## References 
 
 - Youtube : tutorial videos for binder
