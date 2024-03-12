@@ -12,6 +12,10 @@ If a binder building is successful it will be easy to share it among users for G
 
 Free binder websites are limited in docker images size, hence the challenge.
 
+## Licences
+
+GUDHI and binder and Jupyterhub licences apply : no commercial use.
+
 ## References 
 
 - Youtube : tutorial videos for binder
