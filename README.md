@@ -8,6 +8,12 @@ GUDHI can be built in various ways, but this repo is for building it using binde
 
 If a binder building is successful it will be easy to share it among users for GUDHI demonstrations.
 
+## Building
+
+Building time can be about thirty minutes.
+
+A dedicated server is comfy for a complete install of a binderhub.
+
 ## Limitations
 
 Free binder websites are limited in docker images size, hence the challenge.
