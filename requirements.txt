@@ -6,13 +6,4 @@ scipy
 Cython
 POT
 scikit-learn
-sphinx
-torch
-pykeops
-eagerpy
-hnswlib
-tensorflow
-sphinx_paramlinks
-pydata_sphinx_theme
-sphinxcontrib.bibtex
 networkx
